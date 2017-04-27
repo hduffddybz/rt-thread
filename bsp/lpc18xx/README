@@ -1,1 +1,6 @@
-If you try to use Keil uVision to load program into internal flash and the program cannot run without any resonable reasons, please check this article:http://www.keil.com/support/docs/3592.htm?nsukey=EaVraFdgfI1rBNHfqNoUGM%2F89JCcMScCSR5xouA9Z7gc4CvAUkgYbsZUqMFKrmExfOzBnXZmumwesJ%2F6GnDDbxVvqc039eo5%2BZ%2Bz2aj7szXwRCVcyGnWz2gSPF1TSqKsIETf%2FfHPgCox%2FSUET9ff%2FUjCH6GbNVOjI8t397g51Vkds3q8mJNbiXy0QYEfPHJA
+1.Download and install newest version of Python2.7(Do not install 64 bit) and Scons. Please do not forget to set the environment variable of Scons
+2.Creat the project using 'scons --target=mdk5 -s' using Windows CMD(please do not use shell on windows when using scons)
+3.Compile the project using Keil uVision5
+4.Keil uVision5 can also be used to flash and debug program.
+5.If you cannot run program without any reasonable reasons, please check the following website: http://www.keil.com/support/docs/3592.htm?nsukey=EaVraFdgfI1rBNHfqNoUGM%2F89JCcMScCSR5xouA9Z7gc4CvAUkgYbsZUqMFKrmExfOzBnXZmumwesJ%2F6GnDDbxVvqc039eo5%2BZ%2Bz2aj7szXwRCVcyGnWz2gSPF1TSqKsIETf%2FfHPgCox%2FSUET9ff%2FUjCH6GbNVOjI8t397g51Vkds3q8mJNbiXy0QYEfPHJA and in "options for target->User->After Build/Rebuild->Run #1", add "$K\ARM\BIN\ELFDWT.EXE !L BASEADDRESS(0x1A000000)" if you flash program on bank a
+
